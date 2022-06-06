@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root {
+   --bg-body: #131416; 
+   --color-font: #ffff;
+   --color-button: #0772eb;
+   --color-card: #1e212c;
+}
+
+/*zerando as configurações padrão*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* estilo do body*/
+
+body {
+    background-color: var(--bg-body);
+}
+
+.container {
+    max-width: 830px;
+    margin: auto;
+}
+/* estilo do header */
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.logo h2 {
+    color: var(--color-font);
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    margin-right: 5px;
+}
+
+/*  fim do estilo header */
+
+/* estilo da sessão 1 */
+
+.section-1 {
+    display: flex;
+    margin-top: 100px;
+}
+
+.action-title {
+    font-size: 35px;
+    color: var(--color-font);
+}
+
+.button{
+    background-color: var(--color-button);
+    display: inline-block;
+    padding: 15px 70px;
+    margin-top: 15px;
+    border-radius: 50px;
+    color: var(--color-font);
+    font-size: 20px;
+    text-transform: uppercase;  
+    font-weight: bold;
+    text-decoration: none; 
+    position: relative;
+    transition: 1.5s;
+}
+
+.button:hover {
+    color: rgb(0, 0, 0);
+    border: none;
+}
+
+.button :before {
+    content: ' ';
+    border-radius: 20px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 60px;
+    background-color: rgb(61, 61, 61);
+    z-index: -1;
+    transition: 1s;
+}
+
+.button:hover:before {
+    width: 100%;
+}
+
+.ebook img {
+    width: 230px;
+    height: auto;
+    margin-right: 50px;
+}
+
+/* Estilo da sessão */
+
+.section-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 180px;
+}
+
+.section-2 h2 {
+    color: var(--color-font);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    height: 180px;
+    background-color: var(--color-card);
+    border-radius: 10px;
+    color: var(--color-font);
+}
+
+.card img {
+    width: 70px;
+    height: 70px;
+}
+
+.section-3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.button-2 {
+    display: inline-block;
+    background-color: #1e212c;
+    color: var(--color-font);
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button-2:hover {
+    background-color: #0772eb;
+    color: #131416;
+    transition: 2s;
+}
+
+.section-3 h2 {
+    font-size: 55px;
+    color: #0772eb;
+    margin-top: 35px;
+}
+
+.section-3 p {
+    color: var(--color-font);
+    margin-top: 5px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c2029;
+    height: 100px;
+    margin-top: 80px;
+}
+
+.button-footer {
+    display: inline-block;
+    padding: 15px 70px;
+    background-color: var(--color-button);
+    border-radius: 50px;
+    color: var(--color-font);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: -85px;
+    position: absolute;
+}
+
+.button-footer:hover {
+    background-color: #131416;
+    color: var(--color-font);
+    transition: 1.5s;
+}
+.no-copy p {
+    color: var(--color-font);
+    margin-top: 70px;
+    position: relative;
+}
+
+/* estilo para responsividade*/
+
+@media (max-width: 420px) {
+    .section-1 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .ebook img {
+        margin-right: 0px;
+    }
+
+    .action-title h2 {
+        font-size: 30px;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .action-title a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 340px;
+        margin: auto;
+        margin-top: 40px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        margin-top: 40px;
+    }
+
+    .section-3 {
+        margin-top: 150px;
+    }
+
+    .section-3 h2 {
+        margin: auto;
+        margin-left: 50px;
+        margin-top: 40px;
+    }
+
+}
+
